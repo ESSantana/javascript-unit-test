@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import reduce from './reduce'
+import reduce from './reduce-recursive'
 
 it('reduce should be a function', () => {
     expect(reduce).to.be.a("function");

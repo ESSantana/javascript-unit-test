@@ -29,10 +29,18 @@ it('map([1,2], (item,index,array) => array) should return [[1,2],[1,2]]', () => 
     expect(map([1, 2], (item, index, array) => array)).to.be.deep.equal([[1, 2], [1, 2]])
 });
 
-it('map([1,2]) should throw exception Function must be passed', () => {
-    // expect(map).to.throw(TypeError, /Function must be passed/)
+it('map() should return [] ', () => {
+    expect(map()).to.be.deep.equal([]);
 });
 
-it('map(1) should throw exception Array must be passed', () => {
-    // expect(map(1)).to.throw(TypeError).with.property('message','Array must be passed')
+it('map([1]) should return [] ', () => {
+    expect(map([1])).to.be.deep.equal([1]);
 });
+
+// it('map([1,2]) should throw exception Function must be passed', () => {
+//     // expect(map).to.throw(TypeError, /Function must be passed/)
+// });
+
+// it('map(1) should throw exception Array must be passed', () => {
+//     // expect(map(1)).to.throw(TypeError).with.property('message','Array must be passed')
+// });

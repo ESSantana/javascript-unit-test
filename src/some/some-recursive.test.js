@@ -5,6 +5,10 @@ it('some should be a function', () => {
     expect(some).to.be.a("function");
 });
 
+it('some() should return false', () => {
+    expect(some()).to.not.be.ok;
+});
+
 it('some([], (item) => item) should return false', () => {
     expect(some([])).to.not.be.ok;
 });
