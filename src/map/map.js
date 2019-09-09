@@ -1,12 +1,15 @@
-'use strict'
+export default (args, func) => {
+    // if(!Array.isArray(args))
+    //     throw new TypeError('Array must be passed')
+    
+    // if(typeof(func) !== 'function')
+    //     throw new TypeError('Function must be passed')
+    
 
-const map = (arr = [], func = (item) => item) => {
     let newArr = []
-
-    for(let i = 0; i < arr.length; i++) {
-        newArr.push(func(arr[i],i,arr))
+    for (let i = 0; i < args.length; i++) {
+        newArr.push(func(args[i], i,args))
     }
+
     return newArr
 }
-
-export default map

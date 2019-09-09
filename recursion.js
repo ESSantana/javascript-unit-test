@@ -1,10 +1,9 @@
 const sum = (arr) => {
-    if(arr.length === 0){
+    if(arr.lengt === 0){
         return 0
+    } else {
+        return arr[0] + sum(arr.slice(1))
     }
-
-    const [head, ...tail] = arr
-    return head + sum(tail)
 }
 
 console.log(sum([1,2,3]))

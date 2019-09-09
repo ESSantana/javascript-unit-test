@@ -1,14 +1,10 @@
-'use strict'
-
-const filter = (arr, func) => {
-    let newArr = [] 
-
-    for(let i=0;i<arr.length;i++){
-        if(func(arr[i], i))
-            newArr.push(arr[i])
+const Filter = (arg, func) => {
+    let arr = []
+    for(let i=0; i<arg.length; i++){
+        if(func(arg[i], i, arg))
+            arr.push(arg[i])
     }
-
-    return newArr
+    return arr
 }
 
-export default filter
+export default Filter
