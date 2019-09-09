@@ -33,6 +33,22 @@ it('map([1,2], (item,index,array) => array) should return [[1,2],[1,2]]', () => 
 //     expect(map).to.throw(TypeError, /Function must be passed/)
 // });
 
-// it('map(1) should throw exception Array must be passed', () => {
-//     expect(map(1)).to.throw(TypeError).with.property('message','Array must be passed')
-// });
+it('map(1) should throw a TypeError', () => {
+    let error
+    try {
+        map(1)
+    } catch (e) {
+        error = e
+    }
+    expect(error.name).to.be.equal("TypeError");
+});
+
+it('map([1,2],"function") should throw a TypeError', () => {
+    let error
+    try {
+        map([1,2],"function")
+    } catch (e) {
+        error = e
+    }
+    expect(error.name).to.be.equal("TypeError");
+});
